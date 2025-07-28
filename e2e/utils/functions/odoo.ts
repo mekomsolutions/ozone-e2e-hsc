@@ -1,7 +1,6 @@
 import { expect, Page } from '@playwright/test';
 import { ODOO_URL } from '../configs/globalSetup';
 import { delay, patientName } from './openmrs';
-import { Keycloak, user } from './keycloak';
 
 export var randomOdooGroupName = {
   groupName : `${Array.from({ length: 8 }, () => String.fromCharCode(Math.floor(Math.random() * 26) + 97)).join('')}`,
@@ -13,21 +12,15 @@ export class Odoo {
 
   async open() {
     await this.page.goto(`${ODOO_URL}`);
-    await this.page.getByRole('link', { name: /login with single sign-on/i }).click(), delay(4000);
-    if(await this.page.locator('#username').isVisible()) {
-      const keycloak = new Keycloak(this.page);
-      await keycloak.enterCredentials();
-    }
+    await this.page.locator('#login').fill('admin');
+    await this.page.locator('#password').fill('admin');
+    await this.page.getByRole('button', { name: /log in/i }).click();
     await expect(this.page).toHaveURL(/.*web/);
   }
 
   async login() {
     await this.page.goto(`${ODOO_URL}`);
     await this.page.getByRole('link', { name: /login with single sign-on/i }).click(), delay(4000);
-    if(await this.page.locator('#username').isVisible()) {
-      const keycloak = new Keycloak(this.page);
-      await keycloak.enterUserCredentials();
-    }
     await expect(this.page).toHaveURL(/.*web/);
   }
   async enterAdminCredentials() {
@@ -148,9 +141,8 @@ export class Odoo {
   async searchUser() {
     await this.page.getByRole('button', { name: /remove/i }).click();
     await expect(this.page.getByRole('searchbox', { name: /search/i })).toBeVisible();
-    await this.page.getByRole('searchbox', { name: /search/i }).type(`${user.email}`);
+    //await this.page.getByRole('searchbox', { name: /search/i }).type(`${user.email}`);
     await this.page.getByRole('searchbox', { name: /search/i }).press('Enter');
-    await this.page.getByRole('cell', { name: `${user.email}` }).click(), delay(3000)
   }
 
   async searchGroup() {
