@@ -1,0 +1,62 @@
+Listing tests:
+  [chromium] › erpnext-openmrs-flows.spec.ts:18:5 › Ordering a lab test for an OpenMRS patient creates the corresponding ERPNext customer.
+  [chromium] › erpnext-openmrs-flows.spec.ts:30:5 › Ordering a drug for an OpenMRS patient creates the corresponding ERPNext customer with a filled quotation.
+  [chromium] › erpnext-openmrs-flows.spec.ts:47:5 › Editing the details of an OpenMRS patient with a synced lab order edits the corresponding ERPNext customer details.
+  [chromium] › erpnext-openmrs-flows.spec.ts:67:5 › Editing the details of an OpenMRS patient with a synced drug order edits the corresponding ERPNext customer details.
+  [chromium] › erpnext-openmrs-flows.spec.ts:88:5 › Ending an OpenMRS patient visit with a synced drug order updates the corresponding ERPNext draft quotation to an open state.
+  [chromium] › erpnext-openmrs-flows.spec.ts:109:5 › Revising details of a synced OpenMRS drug order modifies the corresponding ERPNext quotation item.
+  [chromium] › erpnext-openmrs-flows.spec.ts:132:5 › Ordering a drug with a free text medication dosage for an OpenMRS patient creates the corresponding ERPNext customer with a filled quotation.
+  [chromium] › erpnext-openmrs-flows.spec.ts:147:5 › Discontinuing a synced OpenMRS drug order for an ERPNext customer with a single quotation line removes the corresponding quotation.
+  [chromium] › erpnext-openmrs-flows.spec.ts:169:5 › Discontinuing a synced OpenMRS lab order for an ERPNext customer removes the corresponding quotation.
+  [chromium] › erpnext-openmrs-flows.spec.ts:191:5 › Ordering a drug for an OpenMRS patient within a visit creates the corresponding ERPNext customer with a filled quotation linked to the visit.
+  [chromium] › keycloak-odoo-flows.spec.ts:17:5 › Logging out from Odoo ends the session in Keycloak and logs out the user.
+  [chromium] › keycloak-odoo-flows.spec.ts:44:5 › Coded Odoo groups create corresponding Keycloak roles.
+  [chromium] › keycloak-odoo-flows.spec.ts:81:5 › Creating an Odoo group creates the corresponding Keycloak role
+  [chromium] › keycloak-odoo-flows.spec.ts:102:5 › Updating a synced Odoo group updates the corresponding Keycloak role.
+  [chromium] › keycloak-odoo-flows.spec.ts:134:5 › Deleting a synced Odoo group deletes the corresponding Keycloak role.
+  [chromium] › keycloak-openmrs-flows.spec.ts:17:5 › Logging out from OpenMRS ends the session in Keycloak and logs out the user.
+  [chromium] › keycloak-openmrs-flows.spec.ts:39:5 › Creating an OpenMRS role creates the corresponding Keycloak role.
+  [chromium] › keycloak-openmrs-flows.spec.ts:64:5 › Updating a synced OpenMRS role updates the corresponding Keycloak role.
+  [chromium] › keycloak-openmrs-flows.spec.ts:101:5 › Deleting a synced OpenMRS role deletes the corresponding Keycloak role.
+  [chromium] › keycloak-openmrs-flows.spec.ts:132:5 › A (non-synced) role created from within Keycloak gets deleted in the subsequent polling cycle.
+  [chromium] › keycloak-senaite-flows.spec.ts:17:5 › Logging out from SENAITE ends the session in Keycloak and logs out the user.
+  [chromium] › keycloak-superset-flows.spec.ts:17:5 › Logging out from Superset ends the session in Keycloak and logs out the user.
+  [chromium] › keycloak-superset-flows.spec.ts:44:5 › Creating a Superset role creates the corresponding Keycloak role.
+  [chromium] › keycloak-superset-flows.spec.ts:63:5 › Updating a synced Superset role updates the corresponding Keycloak role.
+  [chromium] › keycloak-superset-flows.spec.ts:90:5 › Deleting a synced Superset role deletes the corresponding Keycloak role.
+  [chromium] › keycloak-superset-flows.spec.ts:115:5 › A synced role deleted from within Keycloak gets recreated in the subsequent polling cycle.
+  [chromium] › odoo-openmrs-flows.spec.ts:18:5 › Ordering a lab test for an OpenMRS patient creates the corresponding Odoo customer with a filled quotation.
+  [chromium] › odoo-openmrs-flows.spec.ts:33:5 › Editing the details of an OpenMRS patient with a synced lab order edits the corresponding Odoo customer details.
+  [chromium] › odoo-openmrs-flows.spec.ts:62:5 › Ordering a drug for an OpenMRS patient creates the corresponding Odoo customer with a filled quotation.
+  [chromium] › odoo-openmrs-flows.spec.ts:78:5 › Editing the details of an OpenMRS patient with a synced drug order edits the corresponding Odoo customer details.
+  [chromium] › odoo-openmrs-flows.spec.ts:108:5 › Revising details of a synced OpenMRS drug order modifies the corresponding Odoo quotation line.
+  [chromium] › odoo-openmrs-flows.spec.ts:139:5 › Discontinuing a synced OpenMRS drug order for an Odoo customer with a single quotation line removes the corresponding quotation.
+  [chromium] › odoo-openmrs-flows.spec.ts:168:5 › Discontinuing a synced OpenMRS drug order for an Odoo customer with multiple quotation lines removes the corresponding quoatation.
+  [chromium] › odoo-openmrs-flows.spec.ts:201:5 › Ordering a drug with a free text medication dosage for an OpenMRS patient creates the corresponding Odoo customer with a filled quotation.
+  [chromium] › odoo-openmrs-flows.spec.ts:215:5 › Discontinuing a synced OpenMRS lab order for an Odoo customer with a single quotation line cancels the corresponding quotation.
+  [chromium] › odoo-openmrs-flows.spec.ts:240:5 › Ordering a lab test for an OpenMRS patient with weight creates the weight on the corresponding Odoo quotation.
+  [chromium] › odoo-openmrs-flows.spec.ts:263:5 › Recording a patient's weight in OpenMRS on the second order creates the weight on the corresponding Odoo quotation.
+  [chromium] › odoo-superset-flows.spec.ts:21:5 › Creating an Odoo sale order line generates an entry in Superset's sale_order_lines table.
+  [chromium] › odoo-superset-flows.spec.ts:65:5 › Revising an Odoo sale order line updates the corresponding entry in Superset's sale_order_lines table.
+  [chromium] › odoo-superset-flows.spec.ts:107:5 › Voiding an Odoo sale order line updates the corresponding entry in Superset's sale_order_lines table.
+  [chromium] › odoo-superset-flows.spec.ts:149:5 › Deleting an Odoo quotation line deletes the corresponding entry in Superset's sale_order_lines table.
+  [chromium] › odoo-superset-flows.spec.ts:187:5 › A (synced) sale order line in Odoo generates an entry in Superset's sale_order_lines table.
+  [chromium] › openmrs-senaite-flows.spec.ts:18:5 › Ordering a lab test for an OpenMRS patient creates the corresponding SENAITE client with an analysis request.
+  [chromium] › openmrs-senaite-flows.spec.ts:30:5 › Editing the details of an OpenMRS patient with a synced lab order edits the corresponding SENAITE client details.
+  [chromium] › openmrs-senaite-flows.spec.ts:48:5 › Voiding a synced OpenMRS lab order cancels the corresponding SENAITE analysis request.
+  [chromium] › openmrs-senaite-flows.spec.ts:72:5 › Published coded lab results from SENAITE are viewable in the OpenMRS lab results viewer.
+  [chromium] › openmrs-senaite-flows.spec.ts:90:5 › Published numeric lab results from SENAITE are viewable in the OpenMRS lab results viewer.
+  [chromium] › openmrs-senaite-flows.spec.ts:108:5 › Published free text lab results from SENAITE are viewable in the OpenMRS lab results viewer.
+  [chromium] › openmrs-superset-flows.spec.ts:16:5 › Creating an OpenMRS patient creates the patient in Superset's patients table.
+  [chromium] › openmrs-superset-flows.spec.ts:53:5 › Creating an OpenMRS visit creates the visit in Superset's visits table.
+  [chromium] › openmrs-superset-flows.spec.ts:92:5 › Creating an OpenMRS order creates the order in Superset's orders table.
+  [chromium] › openmrs-superset-flows.spec.ts:137:5 › Creating an OpenMRS encounter creates the encounter in Superset's encounters table.
+  [chromium] › openmrs-superset-flows.spec.ts:178:5 › Creating an OpenMRS condition creates the condition in Superset's conditions table.
+  [chromium] › openmrs-superset-flows.spec.ts:224:5 › Creating an OpenMRS obs creates the observation in Superset's observations table.
+  [chromium] › openmrs-superset-flows.spec.ts:267:5 › Creating an OpenMRS appointment creates the appointment in Superset's appointments table.
+  [chromium] › openmrs-superset-flows.spec.ts:314:5 › Voiding an OpenMRS obs updates the observation in Superset's observations table.
+  [chromium] › openmrs-superset-flows.spec.ts:348:5 › Voiding an OpenMRS patient updates the patient in Superset's patients table.
+  [chromium] › openmrs-superset-flows.spec.ts:372:5 › Voiding an OpenMRS condition updates the condition in Superset's conditions table.
+  [chromium] › openmrs-superset-flows.spec.ts:407:5 › Voiding an OpenMRS encounter updates the encounter in Superset's encounters table.
+  [chromium] › openmrs-superset-flows.spec.ts:439:5 › Cancelling an OpenMRS appointment updates the appointment in Superset's appointments table.
+Total: 60 tests in 9 files

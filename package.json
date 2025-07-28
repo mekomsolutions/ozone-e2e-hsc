@@ -1,0 +1,28 @@
+{
+  "name": "ozone-e2e",
+  "version": "next",
+  "license": "MPL-2.0",
+  "description": "These are end-to-end automated tests for Ozone HSC workflows",
+  "main": "index.js",
+  "files": [
+    "**/*",
+    "!**/.git*/",
+    "!*.gitignore",
+    "!node_modules/",
+    "!tests/",
+    "!test-results/",
+    "!playwright-report/"
+  ],
+  "scripts": {
+    "hsc-e2e": "npx playwright test"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.6",
+    "dotenv": "^17.2.1",
+    "typescript": "^5.8.3"
+  }
+}
