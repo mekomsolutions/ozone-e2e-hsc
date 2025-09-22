@@ -1,7 +1,7 @@
 import { devices, PlaywrightTestConfig } from '@playwright/test';
 import { O3_URL } from './e2e/utils/configs/globalSetup';
 import * as dotenv from 'dotenv';
-dotenv.config();
+dotenv.config({ quiet: true });
 
 const config: PlaywrightTestConfig = {
   testDir: './e2e/tests',
@@ -24,6 +24,7 @@ const config: PlaywrightTestConfig = {
       use: {
         ...devices['Desktop Chromium'],
         viewport: { width: 1920, height: 1080 },
+        screenshot: 'only-on-failure',
         storageState: undefined
       },  
     },
