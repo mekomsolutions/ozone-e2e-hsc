@@ -42,6 +42,12 @@ jobs:
       - name: Run E2E tests
         env:
           TEST_ENVIRONMENT: '${{ github.event.inputs.environment }}'
+          O3_URL_DEV: '${{ vars.O3_URL_DEV }}'
+          ODOO_URL_DEV: '${{ vars.ODOO_URL_DEV }}'
+          O3_USERNAME: '${{ secrets.O3_USERNAME }}'
+          O3_PASSWORD: '${{ secrets.O3_PASSWORD }}'
+          ODOO_USERNAME: '${{ secrets.ODOO_USERNAME }}'
+          ODOO_PASSWORD: '${{ secrets.ODOO_PASSWORD }}'
         run: npm run hsc-e2e
 
       - name: Upload report
